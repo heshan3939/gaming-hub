@@ -1,0 +1,245 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0px;
+  padding:0;
+  background:linear-gradient(to right, #333, #888888);
+  width: 100%;
+}
+header, footer {
+    background-color: #031e1d;
+    color: #000000;
+    padding: 20px ;
+    margin: 0;
+    text-decoration: none;
+  
+  }
+  header{
+    position: sticky;
+    top: 0;
+    height: 135px;
+  }
+
+  .nav-links a:hover, .active.active {
+    background-color: #333;
+    color: #66fcf1;
+  }
+
+  h1{
+    font-size:30px;
+    margin-top: 0;
+    filter: drop-shadow(2px 2px 5px cyan);
+  }
+.burger-icon {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+}
+.burger-icon div {
+  height: 3px;
+  background-color: #66fcf1;
+}
+.ibdiv{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 65%;
+}
+.mobile-nav {
+  display: none;
+  position: relative;
+  top: 10px;
+  right: 0;
+  background-color: #031e1d;
+  width: 100%;
+  padding: 10px;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
+}
+.mobile-nav ul {
+  list-style: none;
+}
+.mobile-nav li {
+  margin: 10px 0;
+}
+.mobile-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 20px;
+  display: block;
+}
+.nav-links {
+  display: none;
+}
+.burger-icon {
+  display: flex;
+}
+.mobile-nav.active {
+  display: block;
+}
+h2{
+    background-color: #031e1d;
+    color: #95d4e7;
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    width: 100%;
+    align-items: center;
+    margin-top: 0;
+ 
+    
+
+  }
+  h3{
+    display: flex;
+    text-align: center;
+    font-size: 18px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #727272;
+    box-shadow: 0 4px 8px  rgb(0, 0, 0);
+    border-radius: 8px;
+  }
+  .games-flexbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  .game-item{
+    
+    width: 80%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+   
+    cursor: pointer;
+   
+    
+  }
+  .game-item img {
+    width: 100%;
+    height: 85%; 
+    box-shadow: 0 4px 8px #000000;
+  }
+  .game-item:hover .release-date {
+    display: block;
+  }
+  .release-date {
+    position: relative;
+    color: #30b0be;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    display: none; 
+    background-color: #031e1d;
+  }
+
+  footer {
+    font-size: 0.8em;
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    color: #30b0be;
+  }
+  
+  .social-media-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+  }
+  
+  .social-icon img {
+      width: 30px;
+      height: 30px;
+      transition: transform 0.3s ease;
+  }
+  
+  .social-icon img:hover {
+      transform: scale(1.1);
+  }
+  
+  .social-icon {
+      display: inline-block;
+  }
+
+  @media(min-width: 1024px){
+    body{
+        flex-direction: column;
+        width: auto;
+        
+    }
+   
+  .nav-links{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 8px;
+    margin-left: 110px;
+    
+  }
+  .nav-links a{
+    text-decoration: none;
+    color: #66fcf1;
+    font-size: larger;
+    border: 2px solid #66fcf1;
+    background-color: #000000;
+    border-radius: 5px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px;
+    box-shadow: 2px 2px 5px #66fcf1;
+  }
+  .nav-links li {
+    list-style: none;
+    flex-grow: 1;
+  }
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+  }
+    header{
+      display: flex;
+      flex-direction:row ;
+      align-items: center;
+      height: 100px;
+    }
+    footer{
+      text-align: center;
+    }
+    .games-flexbox{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      margin:50px 200px ;
+    }
+    .games-flexbox{
+      display: grid;
+      grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+      gap: 15px;
+      padding: 15px;
+      width: 100%;
+      max-width: 1200px;
+      margin-top: 50px;
+    }
+    footer{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    .social-icon img {
+      width: 60px;
+      height: 60px;
+      transition: transform 0.3s ease;
+    }
+  }
