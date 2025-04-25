@@ -1,4 +1,4 @@
-/* style.css */
+
 
 body {
   margin: 0;
@@ -177,7 +177,7 @@ select:focus {
   background-color: #2a2a2a;
   border-radius: 8px;
   overflow: hidden;
-  min-width: 600px; /* ensures table doesn't shrink too much on mobile */
+  min-width: 600px; 
 }
 
 #order-summary th,
