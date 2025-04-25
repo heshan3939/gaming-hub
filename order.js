@@ -6,12 +6,9 @@ window.addEventListener('DOMContentLoaded', function () {
     const orderItemsTable = document.getElementById('order-items');
     const orderTotal = document.getElementById('order-total');
 
-    // 🧹 Reset all selects to 0 on page load
-    document.querySelectorAll('select').forEach(select => {
-        select.value = "0";
-    });
+   
 
-    // Function to update the order summary table
+    // update the order summary table
     function collectOrderItems() {
         orderItemsTable.innerHTML = '';
         let total = 0;
@@ -42,7 +39,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
         orderTotal.textContent = `$${total.toFixed(2)}`;
 
-        // Remove button functionality
+        // Remove button
         document.querySelectorAll('.remove-btn').forEach(button => {
             button.addEventListener('click', function () {
                 const selectId = this.getAttribute('data-select-id');
@@ -56,7 +53,7 @@ window.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // On any dropdown change, update the summary
+    // update the summary
     document.querySelectorAll('select').forEach(select => {
         select.addEventListener('change', collectOrderItems);
     });
@@ -93,7 +90,7 @@ window.addEventListener('DOMContentLoaded', function () {
     // Initialize order summary on page load
     collectOrderItems();
 
-    // 🛒 Buy Now functionality
+    // Buy Now button
     buyNowBtn.addEventListener('click', function () {
         const orderItems = [];
 
